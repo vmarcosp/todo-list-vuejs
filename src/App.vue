@@ -2,20 +2,31 @@
   <div id="app">
     <section class="todoapp">
       <h1>Tarefas</h1>
-      <input-task></input-task>
+      <input-task @receiveNewTask="addNewTask"></input-task>
+      <task-list :taskList="tasks"></task-list>
     </section>
   </div>
 </template>
 
 <script>
-import InputTask from './components/InputTask'
+import InputTask from './components/InputTask';
+import TaskList from './components/TaskList';
 
 export default {
   name: 'app',
+  data() {
+    return { tasks: [] };
+  },
   components: {
-    InputTask
+    InputTask,
+    TaskList
+  },
+  methods: {
+    addNewTask(task) {
+      this.tasks.push(task);
+    }
   }
-}
+};
 </script>
 
 <style>

@@ -1,26 +1,26 @@
 <template>
     <div>
-        <input @keyup.enter="addTask" class="new-todo" placeholder="O que precisa ser feito?">
+        <input v-on:keyup.enter="addTask" class="new-todo" placeholder="O que precisa ser feito?">
     </div>
 </template>
 
 <script>
-import Task from '../models/Task'
+import Task from '../models/Task';
 
 export default {
-  data () {
-    return {
+    data() {
+        return {
 
+        };
+    },
+    methods: {
+        addTask($event) {
+            let value = $event.target.value;
+            this.$emit('receiveNewTask', new Task(value));
+            $event.target.value = '';
+        }
     }
-  },
-  methods: {
-    addTask ($event) {
-      let value = $event.target.value
-      let task = new Task(value)
-      console.log(task)
-    }
-  }
-}
+};
 </script>
 
 <style>

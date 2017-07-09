@@ -1,10 +1,10 @@
 
 class Task {
-  constructor (title) {
-    this.id = ''
-    this.title = title
-    this.completed = false
+  constructor(title) {
+    this.id = '';
+    this.title = title;
+    this.completed = false;
   }
 }
 
-export default Task
+export default Task;
