@@ -1,16 +1,20 @@
 <template>
-  <div id="app">
-    <section class="todoapp">
-      <h1>Tarefas</h1>
-      <input-task @receiveNewTask="addNewTask"></input-task>
-      <task-list :taskList="tasks"></task-list>
+  <section id="app" class="hero is-dark is-fullheight">
+    <section class="hero-head">
+      <navbar></navbar>
     </section>
-  </div>
+    <section class="app-body">
+          <input-task @receiveNewTask="addNewTask"></input-task>
+          <task-list :taskList="tasks"></task-list>
+    </section>
+    <section class="hero-foot">footer..</section>
+  </section>
 </template>
 
 <script>
 import InputTask from './components/InputTask';
 import TaskList from './components/TaskList';
+import Navbar from './components/Navbar';
 
 export default {
   name: 'app',
@@ -19,7 +23,8 @@ export default {
   },
   components: {
     InputTask,
-    TaskList
+    TaskList,
+    Navbar
   },
   methods: {
     addNewTask(task) {
@@ -29,77 +34,20 @@ export default {
 };
 </script>
 
-<style>
-html,
+<style lang="scss">
+@import './assets/scss/_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+.app-body{
+  display:flex;
+  flex-grow:1;
+  padding:1rem;
+}
 body {
-  margin: 0;
-  padding: 0;
+  background: $background;
 }
 
-button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  -webkit-appearance: none;
-  appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.4em;
-  background: #f5f5f5;
-  color: #4d4d4d;
-  min-width: 230px;
-  max-width: 550px;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 300;
-}
-
-:focus {
-  outline: 0;
-}
-
-.cep {
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-  padding: 5px;
-  border-top: 1px solid #ededed;
-  text-align: center;
-}
-
-.hidden {
-  display: none;
-}
-
-.todoapp {
-  background: #fff;
-  margin: 130px 0 40px 0;
-  position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-  0 25px 50px 0 rgba(0, 0, 0, 0.1);
-}
-
-.todoapp h1 {
-  position: absolute;
-  top: -155px;
-  width: 100%;
-  font-size: 100px;
-  font-weight: 100;
-  text-align: center;
-  color: rgba(175, 47, 47, 0.15);
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
-  text-rendering: optimizeLegibility;
-}
+@import "~bulma";
 </style>
