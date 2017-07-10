@@ -8,16 +8,21 @@
 import Task from '../models/Task';
 
 export default {
-    data() {
-        return {
-
-        };
-    },
     methods: {
         addTask($event) {
             let value = $event.target.value;
-            this.$emit('receiveNewTask', new Task(value));
-            $event.target.value = '';
+            let task = this.createTask(value);
+            this.broadcastOfNewTask(task);
+            this.clearInput();
+        },
+        createTask(value) {
+            return new Task(value);
+        },
+        broadcastOfNewTask(task) {
+            this.$emit('receiveNewTask', task);
+        },
+        clearInput() {
+            this.$el.querySelector('input').value = '';
         }
     }
 };

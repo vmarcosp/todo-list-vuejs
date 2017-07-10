@@ -1,8 +1,8 @@
 <template>
     <ul class="todo-list">
         <li v-for="(task,index) in sortedTasks" :key="index" class="todo">
-            <div>
-                <input @click="completeTask(task)" class="toggle" type="checkbox">
+            <div @click="completeTask(task)" style="cursor:pointer">
+                <input class="toggle" :checked="task.completed" type="checkbox">
                 <label :class="{'completed':task.completed}">{{task.title}}</label>
             </div>
         </li>
@@ -146,6 +146,7 @@ export default {
 .completed {
     text-decoration: line-through;
 }
+
 
 
 /*
