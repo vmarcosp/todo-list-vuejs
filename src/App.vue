@@ -4,8 +4,8 @@
       <navbar></navbar>
     </section>
     <section class="app-body">
-          <input-task @receiveNewTask="addNewTask"></input-task>
-          <task-list :taskList="tasks"></task-list>
+      <input-task @receiveNewTask="addNewTask"></input-task>
+      <task-list :taskList="tasks"></task-list>
     </section>
     <section class="hero-foot">footer..</section>
   </section>
@@ -40,11 +40,13 @@ export default {
 * {
   font-family: 'Ubuntu', sans-serif;
 }
-.app-body{
-  display:flex;
-  flex-grow:1;
-  padding:1rem;
+
+.app-body {
+  display: flex;
+  flex-grow: 1;
+  padding: 1rem;
 }
+
 body {
   background: $background;
 }
