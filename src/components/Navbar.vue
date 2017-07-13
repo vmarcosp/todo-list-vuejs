@@ -16,7 +16,7 @@ export default {
     padding:2.5rem;
     justify-content: center;
     align-items:center;
-    >img{
+    >img {
         width:2.2rem;
     }
     >span {

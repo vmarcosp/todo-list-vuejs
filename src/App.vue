@@ -1,13 +1,24 @@
 <template>
   <section id="app" class="hero is-dark is-fullheight">
+  
     <section class="hero-head">
       <navbar></navbar>
     </section>
+  
     <section class="app-body">
-      <input-task @receiveNewTask="addNewTask"></input-task>
-      <task-list :taskList="tasks"></task-list>
+      <div class="column">
+        <div class="column is-12" style="border:solid 1px red">
+            <input-task @receiveNewTask="addNewTask"></input-task>
+        </div>
+        <div class="column is-12" style="border:solid 1px red">
+          <div class="">
+            <task-list :taskList="tasks"></task-list>
+          </div>
+        </div>
+      </div>
+  
     </section>
-    <section class="hero-foot">footer..</section>
+  
   </section>
 </template>
 

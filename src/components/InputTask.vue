@@ -1,6 +1,7 @@
 <template>
     <div>
-        <input v-on:keyup.enter="addTask" class="new-todo" placeholder="O que precisa ser feito?">
+        <input v-on:keyup.enter="addTask" class="input new-todo" placeholder="O que precisa ser feito?">
+        
     </div>
 </template>
 
@@ -28,5 +29,5 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="scss"> 
 </style>
