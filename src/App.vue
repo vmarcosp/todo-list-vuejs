@@ -1,19 +1,15 @@
 <template>
-  <section id="app" class="hero is-dark is-fullheight">
-  
-    <section class="hero-head">
-      <navbar></navbar>
-    </section>
-  
+  <section id="app" class="hero is-light is-fullheight">
     <section class="app-body">
-      <div class="column">
-        <div class="column is-12" style="border:solid 1px red">
-            <input-task @receiveNewTask="addNewTask"></input-task>
+      <div class="column card is-offset-one-quarter is-half">
+        <div class="column">
+          <logo></logo>
         </div>
-        <div class="column is-12" style="border:solid 1px red">
-          <div class="">
+        <div class="column">
+              <input-task @receiveNewTask="addNewTask"></input-task>
+        </div>
+        <div class="column">
             <task-list :taskList="tasks"></task-list>
-          </div>
         </div>
       </div>
   
@@ -23,9 +19,9 @@
 </template>
 
 <script>
-import InputTask from './components/InputTask';
-import TaskList from './components/TaskList';
-import Navbar from './components/Navbar';
+import InputTask from './components/input-task/InputTask';
+import TaskList from './components/task-list/TaskList';
+import Logo from './components/logo/Logo';
 
 export default {
   name: 'app',
@@ -35,7 +31,7 @@ export default {
   components: {
     InputTask,
     TaskList,
-    Navbar
+    Logo
   },
   methods: {
     addNewTask(task) {
