@@ -1,16 +1,15 @@
 <template>
     <ul class="todo-list">
-        <li v-for="(task,index) in taskList" :key="index" class="todo">
-            <!-- <checkbox :customModel="task.completed"></checkbox> -->
-            <input class="toggle" :checked="task.completed" type="checkbox">
-            <label>{{task.title}}</label>
-        </li>
+        <transition-group name="fade">
+            <li v-for="(task,index) in taskList" :key="index" class="todo">
+                <input class="toggle" :checked="task.completed" type="checkbox">
+                <label>{{task.title}}</label>
+            </li>
+        </transition-group>
     </ul>
 </template>
 
 <script>
-// import Checkbox from '../checkbox/Checkbox';
-
 export default {
     data() {
         return {
@@ -23,18 +22,25 @@ export default {
             required: true
         }
     }
-    // components: {
-    //     Checkbox
-    // }
 };
 </script>
 
 <style lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
+}
+
 .todo-list {
     overflow: auto;
     padding: .2rem;
     height: 30rem;
-    >.todo {
+    .todo {
         display: flex;
         align-items: center;
         >label {
