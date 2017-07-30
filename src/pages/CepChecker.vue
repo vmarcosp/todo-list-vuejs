@@ -6,7 +6,6 @@
             </div>
             <div class="column">
                 <input-field :label="'Informe o CEP'"></input-field>
-                <router-link class="home" to="/">Ver tarefas</router-link>
             </div>
         </div>
     </section>

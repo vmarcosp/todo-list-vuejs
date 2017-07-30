@@ -9,9 +9,7 @@
       </div>
       <div class="column">
         <task-list :taskList="tasks"></task-list>
-      </div>
-      <router-link class="home" to="/cep-checker">Verificar CEP</router-link>
-  
+      </div>  
     </div>
   </section>
 </template>
