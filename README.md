@@ -1,7 +1,7 @@
 # TODO List
 A sample TODO List builded using VueJS
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/vmarcosp/dragons-dashboard/blob/master/LICENSE)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/vmarcosp/todo-list-vuejs/blob/master/LICENSE)
 ## Build Setup
 
 ``` bash
