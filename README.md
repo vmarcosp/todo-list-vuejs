@@ -1,6 +1,6 @@
 # todo-list-vuejs
 
-> A sample TODO list builded usign VueJS
+> A sample TODO list builded using VueJS
 
 ## Build Setup
 

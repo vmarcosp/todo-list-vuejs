@@ -1,0 +1,6 @@
+{
+    "eslint.enable": true,
+    "eslint.options": {
+        "configFile": "/home/vmarcosp/Fontes/Estudos/todo-list-vuejs/.eslintrc.json"
+    }
+}

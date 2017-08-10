@@ -1,7 +1,7 @@
 {
   "name": "todo-list-vuejs",
   "version": "1.0.0",
-  "description": "A sample TODO list builded usign VueJS",
+  "description": "A sample TODO list builded using VueJS",
   "author": "vmarcosp <marcosvcontato.mv@gmail.com>",
   "private": true,
   "scripts": {
