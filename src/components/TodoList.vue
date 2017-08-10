@@ -22,7 +22,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px red;
   flex-flow: column wrap;
 }
 </style>
