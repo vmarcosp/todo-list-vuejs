@@ -1,4 +1,0 @@
-{
-    "eslint.enable": true,
-    "eslint.options": { "configFile": "/home/vmarcosp/Documentos/Fontes/VueJS/todo-list-vuejs/.eslintrc.json" }
-}

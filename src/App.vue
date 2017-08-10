@@ -1,40 +1,28 @@
 <template>
-    <section class="hero is-light is-fullheight">
-        <transition name="fade" mode="out-in">
-            <router-view class="view"></router-view>
-        </transition>
-    </section>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <hello></hello>
+  </div>
 </template>
 
 <script>
-export default {
+import Hello from './components/Hello'
 
-};
+export default {
+  name: 'app',
+  components: {
+    Hello
+  }
+}
 </script>
 
-<style lang="scss">
-@import './assets/scss/_variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity .5s
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
-
-.fade-enter,
-.fade-leave-to {
-    opacity: 0
-}
-
-* {
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.app-body {
-    display: flex;
-    flex-grow: 1;
-    padding: 1rem;
-}
-
-@import "~bulma";
 </style>
