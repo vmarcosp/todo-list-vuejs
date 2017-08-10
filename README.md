@@ -1,7 +1,7 @@
-# todo-list-vuejs
+# TODO List
+A sample TODO List builded using VueJS
 
-> A sample TODO list builded using VueJS
-
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/vmarcosp/dragons-dashboard/blob/master/LICENSE)
 ## Build Setup
 
 ``` bash
@@ -13,15 +13,4 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
