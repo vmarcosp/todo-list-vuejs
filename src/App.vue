@@ -17,6 +17,11 @@ export default {
 
 <style lang="scss">
 @import '~@scss/_variables';
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
 
 body,
 html,

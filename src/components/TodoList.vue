@@ -1,21 +1,28 @@
 <template>
   <div class="todo-list-container">
-    <input>
+    <logo></logo>
+    <!--input  -->
+    <!-- tasklist  -->
   </div>
 </template>
 
 <script>
+import Logo from './Logo';
+
 export default {
-  name: 'todo-list'
+  name: 'todo-list',
+  components: {
+    Logo
+  }
 };
 </script>
 
 <style scoped>
-.todo-list-container{
+.todo-list-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  border:solid 1px red;
+  border: solid 1px red;
   flex-flow: column wrap;
 }
 </style>
