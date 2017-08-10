@@ -15,5 +15,24 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import '~@scss/_variables';
+
+body,
+html,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $background;
+}
 </style>

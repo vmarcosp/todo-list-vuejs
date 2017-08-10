@@ -1,5 +1,6 @@
 <template>
-  <div class="todo-list">
+  <div class="todo-list-container">
+    <input>
   </div>
 </template>
 
@@ -10,5 +11,11 @@ export default {
 </script>
 
 <style scoped>
-
+.todo-list-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:solid 1px red;
+  flex-flow: column wrap;
+}
 </style>
