@@ -1,14 +1,24 @@
 <template>
     <div class="container">
         <input class="select-all" type="checkbox">
-        <input class="input-task" placeholder="What needs to be done ?" type="text">
+        <input v-model="taskLabel" v-on:keyup.enter="createNewTask" class="input-task" placeholder="What needs to be done ?" type="text">
     </div>
 </template>
 
 
 <script>
 export default {
-    name: 'input-task'
+    name: 'input-task',
+    data() {
+        return {
+            taskLabel: ''
+        };
+    },
+    methods: {
+        createNewTask() {
+            this.$emit('createdNewTask', this.taskLabel);
+        }
+    }
 };
 </script>
 
@@ -18,19 +28,19 @@ export default {
 .container {
     background: white;
     padding: {
-        top: .6rem;
-        bottom: .6rem;
-        right: 2rem;
+        top: .4rem;
+        bottom: .4rem;
+        right: 1rem;
+        left: 1rem;
     }
     >.select-all {
-        outline:none;
+        outline: none;
         -webkit-appearance: none;
         transform: rotate(90deg);
         &:before {
             content: '❯';
             color: $gray-semi-dark;
             font-size: 22px;
-            padding: 10px 27px 10px 27px;
         }
     }
     >.input-task {
