@@ -1,5 +1,5 @@
 # TODO List
-A sample TODO List builded using VueJS
+A sample TODO List built using VueJS
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/vmarcosp/todo-list-vuejs/blob/master/LICENSE)
 ## Build Setup
